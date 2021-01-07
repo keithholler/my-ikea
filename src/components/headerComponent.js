@@ -6,7 +6,9 @@ import {
   Form,
   FormControl,
   Modal,
+  Row
 } from "react-bootstrap";
+import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 
 function Header() {
   const [show, setShow] = useState(false);
@@ -14,6 +16,7 @@ function Header() {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const [darkmode, setDarkmode] = useState(false);
 
 
 
@@ -28,7 +31,7 @@ function Header() {
           <i className="fa fa-bars fa-lg" />
         </Button>
 
-        <Navbar.Brand href="#home" className="ml-3 mr-5 ">IKEA</Navbar.Brand>
+        <Navbar.Brand href="#home" className="ml-3 mr-5 "><h3>IKEA</h3></Navbar.Brand>
         <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2 formControl align-middle" />
             <Button variant="outline-secondary" size="sm" className="align-middle">Search</Button>
@@ -91,9 +94,22 @@ function Header() {
           </Nav.Link>
           </Modal.Header>
           <Modal.Body>
-          <Nav.Link href="#products">Products</Nav.Link>
-            <Nav.Link href="#rooms">Rooms</Nav.Link>
-            <Nav.Link href="#deals">Deals</Nav.Link>
+          <Nav.Link href="#products"><h3>Products</h3></Nav.Link>
+            <Nav.Link href="#rooms"><h4>Rooms</h4></Nav.Link>
+            <Nav.Link href="#deals"><h5>Deals</h5></Nav.Link>
+            
+            <BootstrapSwitchButton
+    checked={false}
+    onlabel='Dark'
+    offlabel='Light'
+    onstyle="secondary"
+    onChange={(checked= true) => {
+      setDarkmode({ darkmode: checked })
+      alert(checked)
+    }
+    }
+/>
+         
           </Modal.Body>
         </Modal>
       </div>

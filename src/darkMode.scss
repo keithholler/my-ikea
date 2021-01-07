@@ -1,0 +1,5 @@
+$hello: 'world';
+
+:export {
+  my-var: $hello;
+}
