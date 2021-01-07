@@ -19,7 +19,7 @@ function Header() {
 
   return (
     <div>
-      <Navbar bg="light" variant="light" expand="md">
+      <Navbar  expand="md">
         <Button
           variant="light"
           onClick={handleShow}
@@ -34,7 +34,7 @@ function Header() {
             <Button variant="outline-secondary" size="sm" className="align-middle">Search</Button>
           </Form>
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
+          <Nav className="mr-auto topLink">
             <Nav.Link href="#products">Products</Nav.Link>
             <Nav.Link href="#rooms">Rooms</Nav.Link>
             <Nav.Link href="#deals">Deals</Nav.Link>

@@ -1,4 +1,20 @@
-html,body,#root,.App {
+$mainBackgroundColorLight: white;
+$mainHoverColorLight:black;
+$mainColorLight:grey;
+$advertiseCardColor:white;
+
+$mainBackgroundColorDark: black;
+$mainColorrDark:white;
+$mainHoverColorDark:rgb(189, 189, 189);
+
+
+
+
+
+html,
+body,
+#root,
+.App {
   height: 100%;
   width: 100%;
   scroll-behavior: smooth;
@@ -6,29 +22,21 @@ html,body,#root,.App {
   padding: 0;
 }
 
-
 .modal .modal-dialog-aside {
   width: 350px;
   max-width: 80%;
   height: 100%;
   margin: 0;
-   //transform: translate(200px,0px)!important;
+  //transform: translate(200px,0px)!important;
   // transition: opacity  5s !important;
-
 }
 
-
-.shift{
-  transform: translate(50px,0px)!important;
-  transition: transform 5s !important;
-}
 .modal .modal-dialog-aside .modal-content {
   height: inherit;
   border: 0;
   border-radius: 0;
+  ;
 }
-
-
 
 .modal-header {
   justify-content: left !important;
@@ -41,23 +49,29 @@ html,body,#root,.App {
   }
 }
 
+.nav{
+  color:$mainColorLight;
+}
+
 .nav-link {
-  color: grey;
+  color: $mainColorLight !important;
 
   @include hover-focus() {
-    color: black;
+    color: $mainHoverColorLight !important;
   }
 
   &.disabled {
-    color: grey;
+    color: $mainColorLight!important;
   }
 }
+
+
 
 .show > .nav-link,
 .active > .nav-link,
 .nav-link.show,
 .nav-link.active {
-  color: black;
+  color: $mainHoverColorLight!important;
 }
 
 .formControl {
@@ -65,3 +79,23 @@ html,body,#root,.App {
 }
 
 
+
+.card-text{
+  color:$advertiseCardColor;
+ 
+}
+.card-body{
+  i{
+    color:$advertiseCardColor;
+  } 
+ 
+}
+
+.pillButton {
+  width:300px !important;
+  border-radius: 16px !important;
+  background-color:white !important;
+  border-color:white !important;
+  color:black !important;
+  font-weight: bold !important;
+}
