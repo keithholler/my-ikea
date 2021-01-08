@@ -4,6 +4,7 @@ import { SHOPBY } from "../shared/shopby.js";
 import { SERVICES } from "../shared/services.js";
 import { SUSTAINHOME } from "../shared/sustainhome.js";
 import { BUTTONS } from "../shared/buttons.js";
+import { COLLAGE } from "../shared/collage.js";
 import InfiniteCarousel from "react-leaf-carousel";
 import { Card, Row, Col, Container, Button } from "react-bootstrap";
 
@@ -15,7 +16,8 @@ class Home extends Component {
       shopby: SHOPBY,
       services: SERVICES,
       sustainhome: SUSTAINHOME,
-      buttons:BUTTONS
+      buttons: BUTTONS,
+      collage: COLLAGE,
     };
   }
 
@@ -25,7 +27,7 @@ class Home extends Component {
   render() {
     const advertiseCard = this.state.advertise.map((advertisement) => {
       return (
-        <Col xs="4" style={{ padding: "0px" }}>
+        <Col xs={4} style={{ padding: "0px" }}>
           <Card className="border-0 p-2">
             <Card.Img
               src={advertisement.saleImg}
@@ -72,7 +74,7 @@ class Home extends Component {
 
     const serviceCard = this.state.services.map((service) => {
       return (
-        <Col xs="3" style={{ padding: "0px" }}>
+        <Col xs={3} style={{ padding: "0px" }}>
           <Card className="border-0 p-1">
             <Card.Body style={{ backgroundColor: "#C9C9C9" }}>
               <Card.Text style={{ height: "75px", color: "black " }}>
@@ -132,21 +134,41 @@ class Home extends Component {
 
     const buttonscards = this.state.buttons.map((button) => {
       return (
-    
-              <Button
-                className="pillButton text-nowrap"
-                style={{
-                  fontSize: "7px",
-                  backgroundColor: "white ",
-                  borderColor: "grey ",
-                  color: "black",
-                  width: "100px",
+        <Button
+          className="pillButton text-nowrap"
+          style={{
+            fontSize: "7px",
+            backgroundColor: "white ",
+            borderColor: "grey ",
+            color: "black",
+            width: "100px",
+          }}
+        >
+          {button.text}
+        </Button>
+      );
+    });
 
-                }}
-              >
-                {button.text}
-              </Button>
-             
+    const collagecards = this.state.collage.map((collage) => {
+      return (
+        <Col
+          xs={4}
+          style={{ padding: "0px", height: collage.height, width: "100px" }}
+        >
+          <Card
+            className="border-0 p-2"
+            style={{
+              borderRadius: "0%",
+              height: collage.height,
+              width: "100%",
+            }}
+          >
+            <Card.Img
+              src={collage.shopImg}
+              style={{ height: collage.height }}
+            />
+          </Card>
+        </Col>
       );
     });
 
@@ -221,7 +243,7 @@ class Home extends Component {
           </Button>
         </Row>
         <Row className="mt-5">
-          <Col xs={6}>
+          <Col xs={7}>
             <p style={{ fontWeight: "bold", fontSize: "18px" }}>
               A furniture system made for children
             </p>
@@ -344,21 +366,18 @@ class Home extends Component {
                     </Col>
                   </Row>
                 </div>
-
-
               </Card.ImgOverlay>
             </Card>
           </Col>
         </Row>
         <Row className="mt-5">
-          <Col xs={6}>
+          <Col xs={7}>
             <p style={{ fontWeight: "bold", fontSize: "18px" }}>
-              A furniture system made for children
+            Quick guides to a more sustainable home
             </p>
             <p style={{ fontSize: "10px" }}>
-              SMÅSTAD is a furniture family for sleep and storage that can grow
-              with your child. These clever basics will make it easy to create
-              the perfect solution for smaller children as well as for teens.
+            The planet is the only home we have. We want to demonstrate that at IKEA, 
+            sustainability and affordability go hand in hand & make great solutions accessible for the many.
             </p>
           </Col>
         </Row>
@@ -385,23 +404,23 @@ class Home extends Component {
                 src="../assets/coffee.jpg"
                 style={{ borderRadius: "0%" }}
               />
-              <Card.Body style={{height:'115px'}}>
-                <Card.Text style={{ color: "black",fontSize: "10px"}}>
+              <Card.Body style={{ height: "115px" }}>
+                <Card.Text style={{ color: "black", fontSize: "10px" }}>
                   Enjoy a free hot coffee or tea on us! Plus, other great
                   rewards and benefits. Join for free, today.
                 </Card.Text>
                 <Button
-              className="pillButton"
-              style={{
-                fontSize: "8px",
-                backgroundColor: "black",
-                color: "white",
-                borderColor: "black ",
-                width: "100px",
-              }}
-            >
-              Join IKEA Family
-            </Button>
+                  className="pillButton"
+                  style={{
+                    fontSize: "8px",
+                    backgroundColor: "black",
+                    color: "white",
+                    borderColor: "black ",
+                    width: "100px",
+                  }}
+                >
+                  Join IKEA Family
+                </Button>
               </Card.Body>
             </Card>
           </Col>
@@ -411,35 +430,101 @@ class Home extends Component {
                 src="../assets/plantballs.jpg"
                 style={{ borderRadius: "0%" }}
               />
-              <Card.Body style={{height:'115px'}}>
-                <Card.Text style={{ color: "black",fontSize: "10px"}}>
+              <Card.Body style={{ height: "115px" }}>
+                <Card.Text style={{ color: "black", fontSize: "10px" }}>
                   <b>HUVUDROLL </b>Plant balls <b>$5.99/1.102 lb</b>A new plant
                   ball for the many meat lovers.{" "}
                 </Card.Text>
                 <Button
-              className="pillButton"
-              style={{
-                fontSize: "8px",
-                backgroundColor: "black",
-                color: "white",
-                borderColor: "black ",
-                width: "100px",
-              }}
-            >
-              Learn more
-            </Button>
+                  className="pillButton"
+                  style={{
+                    fontSize: "8px",
+                    backgroundColor: "black",
+                    color: "white",
+                    borderColor: "black ",
+                    width: "100px",
+                  }}
+                >
+                  Learn more
+                </Button>
               </Card.Body>
             </Card>
           </Col>
         </Row>
         <Row className="row-content ">
-          <Col className="d-flex justify-content-around">
-          {buttonscards}
-          </Col>
-         
+          <Col className="d-flex justify-content-around">{buttonscards}</Col>
         </Row>
-    
-          
+        <Row className="row-content ">{collagecards}</Row>
+        <Row className="row-content">
+          <Col>
+            <Card>
+              <Card.Img
+                src="../assets/chest.jpg"
+                style={{ borderRadius: "0%" }}
+              />
+              <Card.Body style={{ height: "115px" }}>
+                <Card.Text style={{ color: "black", fontSize: "10px" }}>
+                  Enjoy a free hot coffee or tea on us! Plus, other great
+                  rewards and benefits. Join for free, today.
+                </Card.Text>
+                <Button
+                  className="pillButton"
+                  style={{
+                    fontSize: "8px",
+                    backgroundColor: "black",
+                    color: "white",
+                    borderColor: "black ",
+                    width: "100px",
+                  }}
+                >
+                  Learn more
+                </Button>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col>
+            <Card>
+              <Card.Img
+                src="../assets/bib.jpg"
+                style={{ borderRadius: "0%" }}
+              />
+              <Card.Body style={{ height: "115px" }}>
+                <Card.Text style={{ color: "black", fontSize: "10px" }}>
+                  <b>HUVUDROLL </b>Plant balls <b>$5.99/1.102 lb</b>A new plant
+                  ball for the many meat lovers.{" "}
+                </Card.Text>
+                <Button
+                  className="pillButton"
+                  style={{
+                    fontSize: "8px",
+                    backgroundColor: "black",
+                    color: "white",
+                    borderColor: "black ",
+                    width: "100px",
+                  }}
+                >
+                  Learn more
+                </Button>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+
+        <Row className="mt-5">
+          <Col xs={6}>
+            <p style={{ fontWeight: "bold", fontSize: "18px" }}>
+            Furniture and inspiration for a better everyday life at home
+            </p>
+            <p style={{ fontSize: "10px" }}>
+            At IKEA you will find well-designed furniture and home furnishings that 
+            are functional and affordable. We have everything from IKEA Kitchens and 
+            smart home solutions to a large selection of bedroom furniture, sofas, lighting, 
+            curtains, bedding and more. Our furniture stores are the perfect place for you to 
+            find inspiration and get tons of home décor ideas that will help you live in a much 
+            more comfortable and sustainable way. Discover our wide range of products in store or online!
+            </p>
+          </Col>
+          </Row>
       </Container>
     );
   }

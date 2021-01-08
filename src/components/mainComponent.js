@@ -1,21 +1,15 @@
 import React, { Component,useState } from "react";
 import Header from "./headerComponent";
 import Home from "./homeComponent";
-import  { ThemeProvider, createGlobalStyle } from "styled-components";
-import { Button } from "react-bootstrap";
+import Footer from "./footerComponent";
+
  
-const GlobalStyle = createGlobalStyle`
-body{
-  background-color:${(props) =>
-    props.theme.mode === "dark" ? "#111" : "#EEE"};
-  color:${(props) => (props.theme.mode === "dark" ? "#EEE" : "#111")};
-}
-`;
+
 
 
 
 function Main(props){
-  const [theme,setTheme] = useState({mode:'dark'})
+
     return (
    
       
@@ -23,6 +17,7 @@ function Main(props){
          
           <Header />
           <Home />
+          <Footer/>
         </React.Fragment>
       
      

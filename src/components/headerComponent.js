@@ -10,6 +10,8 @@ import {
 } from "react-bootstrap";
 import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 
+
+
 function Header() {
   const [show, setShow] = useState(false);
 
@@ -18,11 +20,13 @@ function Header() {
   const handleShow = () => setShow(true);
   const [darkmode, setDarkmode] = useState(false);
 
+ 
 
 
   return (
+    
     <div>
-      <Navbar  expand="md">
+      <Navbar  expand="md" sticky="top" style={{height:"50px"}}>
         <Button
           variant="light"
           onClick={handleShow}
@@ -98,18 +102,7 @@ function Header() {
             <Nav.Link href="#rooms"><h4>Rooms</h4></Nav.Link>
             <Nav.Link href="#deals"><h5>Deals</h5></Nav.Link>
             
-            <BootstrapSwitchButton
-    checked={false}
-    onlabel='Dark'
-    offlabel='Light'
-    onstyle="secondary"
-    onChange={(checked= true) => {
-      setDarkmode({ darkmode: checked })
-      alert(checked)
-    }
-    }
-/>
-         
+           
           </Modal.Body>
         </Modal>
       </div>
