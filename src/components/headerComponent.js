@@ -38,7 +38,7 @@ function Header() {
 
         <Navbar.Brand href="#home" className="ml-3 mr-5 ">
         <img
-         src="../assets/ikea-logo.svg"
+         src="./assets/ikea-logo.svg"
         width="60"
         height="30"
         className="d-inline-block align-top"
@@ -94,7 +94,7 @@ function Header() {
               <i className="fa fa-times fa-sm " />
             </Button>
             <Modal.Title className="mr-4 ml-2"><img
-         src="../assets/ikea-logo.svg"
+         src="./assets/ikea-logo.svg"
         width="60"
         height="30"
         alt="IKEA logo"

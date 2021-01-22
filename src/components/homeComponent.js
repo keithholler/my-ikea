@@ -183,7 +183,7 @@ class Home extends Component {
               <Col xs={8}>
                 <Card.Img
                   variant="top"
-                  src="../assets/IkeaFrontImg.JPG"
+                  src="./assets/IkeaFrontImg.JPG"
                   style={{ width: "100%", height: "300px", borderRadius: "0%" }}
                   className=""
                 />
@@ -272,7 +272,7 @@ class Home extends Component {
           <Col xs={6} className="p-0">
             <Card className="border-0 p-1">
               <Card.Img
-                src="../assets/childfurn1.jpg"
+                src="./assets/childfurn1.jpg"
                 style={{ borderRadius: "0%" }}
               />
               <Card.ImgOverlay className="d-flex align-items-center justify-content-center">
@@ -317,7 +317,7 @@ class Home extends Component {
           <Col xs={6} className="p-0">
             <Card className="border-0 p-1">
               <Card.Img
-                src="../assets/childfurn2.jpg"
+                src="./assets/childfurn2.jpg"
                 style={{ borderRadius: "0%" }}
               />
               <Card.ImgOverlay className="d-flex align-items-center justify-content-center">
@@ -401,7 +401,7 @@ class Home extends Component {
           <Col>
             <Card>
               <Card.Img
-                src="../assets/coffee.jpg"
+                src="./assets/coffee.jpg"
                 style={{ borderRadius: "0%" }}
               />
               <Card.Body style={{ height: "115px" }}>
@@ -427,7 +427,7 @@ class Home extends Component {
           <Col>
             <Card>
               <Card.Img
-                src="../assets/plantballs.jpg"
+                src="./assets/plantballs.jpg"
                 style={{ borderRadius: "0%" }}
               />
               <Card.Body style={{ height: "115px" }}>
@@ -459,7 +459,7 @@ class Home extends Component {
           <Col>
             <Card>
               <Card.Img
-                src="../assets/chest.jpg"
+                src="./assets/chest.jpg"
                 style={{ borderRadius: "0%" }}
               />
               <Card.Body style={{ height: "115px" }}>
@@ -485,7 +485,7 @@ class Home extends Component {
           <Col>
             <Card>
               <Card.Img
-                src="../assets/bib.jpg"
+                src="./assets/bib.jpg"
                 style={{ borderRadius: "0%" }}
               />
               <Card.Body style={{ height: "115px" }}>
