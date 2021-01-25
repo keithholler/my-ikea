@@ -10,7 +10,7 @@ Build status of continus integration
 
 # Screenshots
 
-![my-ikea](https://github.com/keithholler/my-ikea/blob/gh-pages/assets/Screenshot.JPG)
+![my-ikea](https://github.com/keithholler/my-ikea/blob/gh-pages/assets/screenShot.JPG)
 
 # Built with
 Yarn,
